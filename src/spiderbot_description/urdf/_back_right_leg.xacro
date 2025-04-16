@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <link name="br_hip">
+        <visual>
+            <origin rpy="0 0 ${PI}" xyz="-0.05 0 0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_coxa_flbr.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+    </link>
+
+    <joint name="joint_h_br" type="revolute">
+        <parent link="base_link" />
+        <child link="br_hip" />
+        <origin rpy="0 0 ${PI}" xyz="0.4 -0.37 0.06" />
+        <axis xyz="0 0 1"/>
+        <limit lower="-${PI/2}" upper="${PI/4}" effort="${effort}" velocity="${velocity}" />
+    </joint>
+</robot>

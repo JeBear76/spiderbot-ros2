@@ -6,8 +6,8 @@
     <xacro:arg name="is_sim" default="true" />
 
     <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_colors.xacro" />
-    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_gazebo.xacro" />
-    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_ros2_control.xacro" />
+    <!-- <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_gazebo.xacro" />
+    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_ros2_control.xacro" /> -->
 
     <xacro:property name="PI" value="3.14159" />
     <xacro:property name="effort" value="30.0" />
@@ -22,6 +22,30 @@
         </inertial>
     </xacro:macro>
 
-    <link name="world" />
+    <link name="base_footprint" />
+
+    <link name="base_link">
+        <xacro:default_inertial mass="1.0" />
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_body.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="red" />
+        </visual>
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin rpy="0 0 0" xyz="0 0 0.3" />
+    </joint>
+
+    <xacro:include filename="$(find spiderbot_description)/urdf/_front_left_leg.xacro" />
+    <xacro:include filename="$(find spiderbot_description)/urdf/_front_right_leg.xacro" />
+    <xacro:include filename="$(find spiderbot_description)/urdf/_back_left_leg.xacro" />
+    <xacro:include filename="$(find spiderbot_description)/urdf/_back_right_leg.xacro" />
+    
 
 </robot>
