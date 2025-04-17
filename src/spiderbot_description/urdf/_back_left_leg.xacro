@@ -38,4 +38,23 @@
         <axis xyz="1 0 0"/>
         <limit lower="-${PI/4}" upper="${PI/2}" effort="${effort}" velocity="${velocity}" />
     </joint>
+
+    <link name="bl_tibia">
+        <visual>
+            <origin rpy="${PI} 0 0" xyz="0.01 -0.26 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_tibia_frbl.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="purple" />
+        </visual>
+    </link>
+
+    <joint name="joint_femur_tibia_bl" type="revolute">
+        <parent link="bl_femur" />
+        <child link="bl_tibia" />
+        <origin rpy="0 0 0" xyz="0.0 -0.46 0" />
+        <axis xyz="1 0 0"/>
+        <limit lower="-${4*PI/5}" upper="0" effort="${effort}" velocity="${velocity}" />
+    </joint>
 </robot>
