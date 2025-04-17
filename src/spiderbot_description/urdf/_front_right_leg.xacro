@@ -9,6 +9,14 @@
             </geometry>
             <material name="orange" />
         </visual>
+        <collision>
+            <origin rpy="0 0 ${PI}" xyz="0.05 0 0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_coxa_frbl.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="orange" />
+        </collision>
     </link>
 
     <joint name="joint_h_fr" type="revolute">
@@ -28,6 +36,14 @@
             </geometry>
             <material name="yellow" />
         </visual>
+        <collision>
+            <origin rpy="${PI} ${PI} 0" xyz="0.08 0.23 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_femur_frbl.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="yellow" />
+        </collision>
     </link>
 
     <joint name="joint_hip_femur_fr" type="revolute">
@@ -48,6 +64,14 @@
             </geometry>
             <material name="purple" />
         </visual>
+        <collision>
+            <origin rpy="${PI} ${PI} ${PI}" xyz="0.01 0.26 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_tibia_frbl.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="purple" />
+        </collision>
     </link>
 
     <joint name="joint_femur_tibia_fr" type="revolute">

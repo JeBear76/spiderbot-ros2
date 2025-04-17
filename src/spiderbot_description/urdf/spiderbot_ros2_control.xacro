@@ -1,0 +1,127 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="PI" value="3.14159" />
+
+    <ros2_control type="system" name="RobotSystem">
+        <xacro:if value="$(arg is_sim)">
+            <!-- Simulation -->
+            <xacro:if value="$(arg is_ignition)">
+            <!-- ROS 2 Humble -->
+                <hardware>
+                    <plugin>ign_ros2_control/IgnitionSystem</plugin>
+                </hardware>
+            </xacro:if>
+            <xacro:unless value="$(arg is_ignition)">
+            <!-- ROS 2 Iron or above -->
+                <hardware>
+                    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                </hardware>
+            </xacro:unless>
+        </xacro:if>
+        <xacro:unless value="$(arg is_sim)">
+            <!-- Real Robot-->
+            <hardware>
+                <plugin>spiderbot_controller/SpiderbotInterface</plugin>
+                <param name="port">/dev/ttyACM0</param>
+            </hardware>
+        </xacro:unless>
+
+        <joint name="joint_h_fr">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_hip_femur_fr">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_femur_tibia_fr">
+            <command_interface name="position">
+                <param name="min">-${4*PI/5}</param>
+                <param name="max">0</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_h_fl">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_hip_femur_fl">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_femur_tibia_fl">
+            <command_interface name="position">
+                <param name="min">-${4*PI/5}</param>
+                <param name="max">0</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+
+        <joint name="joint_h_br">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/4}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_hip_femur_br">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_femur_tibia_br">
+            <command_interface name="position">
+                <param name="min">-${4*PI/5}</param>
+                <param name="max">0</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+
+        <joint name="joint_h_bl">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/4}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_hip_femur_bl">
+            <command_interface name="position">
+                <param name="min">-${PI/4}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="joint_femur_tibia_bl">
+            <command_interface name="position">
+                <param name="min">-${4*PI/5}</param>
+                <param name="max">0</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        
+
+    </ros2_control>
+</robot>
