@@ -25,7 +25,7 @@
     <link name="base_footprint" />
 
     <link name="base_link">
-        <xacro:default_inertial mass="1.0" />
+        <xacro:default_inertial mass="0.110" />
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.0" />
             <geometry>
@@ -34,6 +34,14 @@
             </geometry>
             <material name="red" />
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_body.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="red" />
+        </collision>
     </link>
 
     <joint name="base_joint" type="fixed">

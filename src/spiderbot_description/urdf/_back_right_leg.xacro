@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <link name="br_hip">
+        <xacro:default_inertial mass="0.02" />
         <visual>
             <origin rpy="0 0 ${PI}" xyz="-0.05 0 0" />
             <geometry>
@@ -28,6 +29,7 @@
     </joint>
 
     <link name="br_femur">
+        <xacro:default_inertial mass="0.02" />
         <visual>
             <origin rpy="0 0 ${PI}" xyz="-0.08 0.23 0.0" />
             <geometry>
@@ -56,6 +58,7 @@
 
     
     <link name="br_tibia">
+        <xacro:default_inertial mass="0.02" />
         <visual>
             <origin rpy="${PI} ${PI} ${PI}" xyz="0.01 0.26 0.0" />
             <geometry>
