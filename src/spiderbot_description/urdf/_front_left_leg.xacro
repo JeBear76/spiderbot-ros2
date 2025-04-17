@@ -20,4 +20,22 @@
         <limit lower="-${PI/2}" upper="${PI/4}" effort="${effort}" velocity="${velocity}" />
     </joint>
 
+    <link name="fl_femur">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.08 -0.23 0.0" />
+            <geometry>
+                <mesh filename="package://spiderbot_description/meshes/m_femur_flbr.stl"
+                    scale="0.01 0.01 0.01" />
+            </geometry>
+            <material name="green" />
+        </visual>
+    </link>
+
+    <joint name="joint_hip_femur_fl" type="revolute">
+        <parent link="fl_hip" />
+        <child link="fl_femur" />
+        <origin rpy="0 0 ${PI/2}" xyz="0.33 0.0 0.03" />
+        <axis xyz="1 0 0"/>
+        <limit lower="-${PI/2}" upper="${PI/4}" effort="${effort}" velocity="${velocity}" />
+    </joint>
 </robot>
