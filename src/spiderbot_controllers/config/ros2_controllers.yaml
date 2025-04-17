@@ -1,0 +1,70 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+
+    fr_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    fl_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    br_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    bl_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+fr_leg_controller:
+  ros__parameters:
+    joints:
+      - joint_h_fr
+      - joint_hip_femur_fr
+      - joint_femur_tibia_fr
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+
+fl_leg_controller:
+  ros__parameters:
+    joints:
+      - joint_h_fl
+      - joint_hip_femur_fl
+      - joint_femur_tibia_fl
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+
+br_leg_controller:
+  ros__parameters:
+    joints:
+      - joint_h_br
+      - joint_hip_femur_br
+      - joint_femur_tibia_br
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+
+bl_leg_controller:
+  ros__parameters:
+    joints:
+      - joint_h_bl
+      - joint_hip_femur_bl
+      - joint_femur_tibia_bl
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true

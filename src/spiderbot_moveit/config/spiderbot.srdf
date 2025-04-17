@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="spiderbot">
+    <group name="fl_leg">
+        <link name="fl_hip" />
+        <link name="fl_femur" />
+        <link name="fl_tibia" />
+    </group>
+
+    <group name="fr_leg">
+        <link name="fr_hip" />
+        <link name="fr_femur" />
+        <link name="fr_tibia" />
+    </group>
+
+    <group name="bl_leg">
+        <link name="bl_hip" />
+        <link name="bl_femur" />
+        <link name="bl_tibia" />
+    </group>
+
+    <group name="br_leg">
+        <link name="br_hip" />
+        <link name="br_femur" />
+        <link name="br_tibia" />
+    </group>
+
+    <group_state name="home" group="fl_leg">
+        <joint name="fl_hip_joint" value="1.57" />
+        <joint name="fl_femur_joint" value="1.57" />
+        <joint name="fl_tibia_joint" value="1.57" />
+    </group_state>
+
+    <group_state name="home" group="fr_leg">
+        <joint name="fr_hip_joint" value="1.57" />
+        <joint name="fr_femur_joint" value="1.57" />
+        <joint name="fr_tibia_joint" value="1.57" />
+    </group_state>
+
+    <group_state name="home" group="bl_leg">
+        <joint name="bl_hip_joint" value="1.57" />
+        <joint name="bl_femur_joint" value="1.57" />
+        <joint name="bl_tibia_joint" value="1.57" />
+    </group_state>
+
+    <group_state name="home" group="br_leg">
+        <joint name="br_hip_joint" value="1.57" />
+        <joint name="br_femur_joint" value="1.57" />
+        <joint name="br_tibia_joint" value="1.57" />
+    </group_state>
+
+    <disable_collisions link1="base_link" link2="fl_hip" reason="ADJACENT" />
+    <disable_collisions link1="base_link" link2="fr_hip" reason="ADJACENT" />
+    <disable_collisions link1="base_link" link2="bl_hip" reason="ADJACENT" />
+    <disable_collisions link1="base_link" link2="br_hip" reason="ADJACENT" />
+    <disable_collisions link1="fl_hip" link2="fl_femur" reason="ADJACENT" />
+    <disable_collisions link1="fl_femur" link2="fl_tibia" reason="ADJACENT" />
+    <disable_collisions link1="fr_hip" link2="fr_femur" reason="ADJACENT" />
+    <disable_collisions link1="fr_femur" link2="fr_tibia" reason="ADJACENT" />
+    <disable_collisions link1="bl_hip" link2="bl_femur" reason="ADJACENT" />
+    <disable_collisions link1="bl_femur" link2="bl_tibia" reason="ADJACENT" />
+    <disable_collisions link1="br_hip" link2="br_femur" reason="ADJACENT" />
+    <disable_collisions link1="br_femur" link2="br_tibia" reason="ADJACENT" />
+    <disable_collisions link1="fl_hip" link2="fr_hip" reason="NEVER" />
+    <disable_collisions link1="fl_hip" link2="bl_hip" reason="NEVER" />
+    <disable_collisions link1="fl_hip" link2="br_hip" reason="NEVER" />
+    <disable_collisions link1="fr_hip" link2="bl_hip" reason="NEVER" />
+    <disable_collisions link1="fr_hip" link2="br_hip" reason="NEVER" />
+    <disable_collisions link1="bl_hip" link2="br_hip" reason="NEVER" />
+    <disable_collisions link1="fl_hip" link2="fl_tibia" reason="NEVER" />
+    <disable_collisions link1="fr_hip" link2="fr_tibia" reason="NEVER" />
+    <disable_collisions link1="bl_hip" link2="bl_tibia" reason="NEVER" />
+    <disable_collisions link1="br_hip" link2="br_tibia" reason="NEVER" />
+    <disable_collision link1="fl_hip" link2="fr_tibia" reason="NEVER" />
+    <disable_collision link1="fl_hip" link2="bl_tibia" reason="NEVER" />
+    <disable_collision link1="fl_hip" link2="br_tibia" reason="NEVER" />
+    <disable_collision link1="fr_hip" link2="bl_tibia" reason="NEVER" />
+    <disable_collision link1="fr_hip" link2="br_tibia" reason="NEVER" />
+    <disable_collision link1="bl_hip" link2="br_tibia" reason="NEVER" />
+    <disable_collisions link1="fl_femur" link2="fr_femur" reason="NEVER" />
+    <disable_collisions link1="fl_femur" link2="bl_femur" reason="NEVER" />
+    <disable_collisions link1="fl_femur" link2="br_femur" reason="NEVER" />
+    <disable_collisions link1="fr_femur" link2="bl_femur" reason="NEVER" />
+    <disable_collisions link1="fr_femur" link2="br_femur" reason="NEVER" />
+    <disable_collisions link1="bl_femur" link2="br_femur" reason="NEVER" />
+    <disable_collisions link1="fl_tibia" link2="fr_tibia" reason="NEVER" />
+    <disable_collisions link1="fl_tibia" link2="br_tibia" reason="NEVER" />
+    <disable_collisions link1="fr_tibia" link2="bl_tibia" reason="NEVER" />
+    <disable_collisions link1="bl_tibia" link2="br_tibia" reason="NEVER" />
+    <disable_collisions link1="fl_femur" link2="fr_tibia" reason="NEVER" />
+    <disable_collisions link1="fl_femur" link2="br_tibia" reason="NEVER" />
+    <disable_collisions link1="fr_femur" link2="fl_tibia" reason="NEVER" />
+    <disable_collisions link1="fr_femur" link2="bl_tibia" reason="NEVER" />
+    <disable_collisions link1="bl_femur" link2="fl_tibia" reason="NEVER" />
+    <disable_collisions link1="bl_femur" link2="fr_tibia" reason="NEVER" />
+    <disable_collisions link1="bl_femur" link2="br_tibia" reason="NEVER" />
+    <disable_collisions link1="br_femur" link2="fl_tibia" reason="NEVER" />
+    <disable_collisions link1="br_femur" link2="fr_tibia" reason="NEVER" />
+    <disable_collisions link1="br_femur" link2="bl_tibia" reason="NEVER" />
+</robot>

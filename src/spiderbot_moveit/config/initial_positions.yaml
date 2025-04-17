@@ -1,0 +1,13 @@
+initial_position:
+  base_to_fl_hip: 0
+  base_to_fr_hip: 0
+  base_to_bl_hip: 0
+  base_to_br_hip: 0
+  fl_hip_to_fl_femur: 0
+  fl_femur_to_fl_tibia: 0
+  fr_hip_to_fr_femur: 0
+  fr_femur_to_fr_tibia: 0
+  bl_hip_to_bl_femur: 0
+  bl_femur_to_bl_tibia: 0
+  br_hip_to_br_femur: 0
+  br_femur_to_br_tibia: 0
