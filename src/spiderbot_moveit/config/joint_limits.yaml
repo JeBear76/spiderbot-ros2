@@ -2,62 +2,73 @@ default_velocity_scaling_factor: 0.1
 default_acceleration_scaling_factor: 0.1
 
 joint_limits:
-  base_to_fl_hip:
+  joint_h_bl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  base_to_fr_hip:
+
+  joint_hip_femur_bl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  base_to_bl_hip:
+
+  joint_femur_tibia_bl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  base_to_br_hip:
+
+  joint_h_br: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  fl_hip_to_fl_femur:
+
+  joint_hip_femur_br: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  fl_femur_to_fl_tibia:
+
+  joint_femur_tibia_br: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  fr_hip_to_fr_femur:
+
+  joint_h_fl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  fr_femur_to_fr_tibia:
+
+  joint_hip_femur_fl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  bl_hip_to_bl_femur:
+
+  joint_femur_tibia_fl: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  bl_femur_to_bl_tibia:
+
+  joint_h_fr: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  br_hip_to_br_femur:
+
+  joint_hip_femur_fr: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true
     max_acceleration: 5.0
-  br_femur_to_br_tibia:
+
+  joint_femur_tibia_fr: 
     has_velocity_limits: true
     max_velocity: 10.0
     has_acceleration_limits: true

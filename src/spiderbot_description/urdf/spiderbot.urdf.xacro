@@ -6,8 +6,8 @@
     <xacro:arg name="is_sim" default="true" />
 
     <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_colors.xacro" />
-    <!-- <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_gazebo.xacro" />
-    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_ros2_control.xacro" /> -->
+    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_gazebo.xacro" />
+    <xacro:include filename="$(find spiderbot_description)/urdf/spiderbot_ros2_control.xacro" />
 
     <xacro:property name="PI" value="3.14159" />
     <xacro:property name="effort" value="30.0" />
@@ -24,7 +24,7 @@
 
     <link name="base_footprint" />
 
-    <link name="base_link">
+    <link name="robot_body">
         <xacro:default_inertial mass="0.110" />
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.0" />
@@ -44,9 +44,9 @@
         </collision>
     </link>
 
-    <joint name="base_joint" type="fixed">
+    <joint name="virtual_joint" type="fixed">
         <parent link="base_footprint" />
-        <child link="base_link" />
+        <child link="robot_body" />
         <origin rpy="0 0 0" xyz="0 0 0.3" />
     </joint>
 

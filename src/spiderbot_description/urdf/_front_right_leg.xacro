@@ -21,7 +21,7 @@
     </link>
 
     <joint name="joint_h_fr" type="revolute">
-        <parent link="base_link" />
+        <parent link="robot_body" />
         <child link="fr_hip" />
         <origin rpy="0 0 0" xyz="0.4 0.37 0.06" />
         <axis xyz="0 0 1"/>

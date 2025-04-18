@@ -1,43 +1,43 @@
 moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
 moveit_simple_controller_manager:
   controller_names:
-    - fl_leg_controller
-    - fr_leg_controller
-    - bl_leg_controller
-    - br_leg_controller
+    - back_left_leg_controller
+    - back_right_leg_controller
+    - front_left_leg_controller
+    - front_right_leg_controller
 
-  fl_leg_controller:
+  back_left_leg_controller: 
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - fl_hip
-      - fl_femur
-      - fl_tibia
+      - joint_h_bl
+      - joint_hip_femur_bl
+      - joint_femur_tibia_bl
 
-  fr_leg_controller:
+  back_right_leg_controller: 
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - fr_hip
-      - fr_femur
-      - fr_tibia
+      - joint_h_br
+      - joint_hip_femur_br
+      - joint_femur_tibia_br
 
-  bl_leg_controller:
+  front_left_leg_controller: 
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - bl_hip
-      - bl_femur
-      - bl_tibia
+      - joint_h_fl
+      - joint_hip_femur_fl
+      - joint_femur_tibia_fl
 
-  br_leg_controller:
+  front_right_leg_controller: 
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - br_hip
-      - br_femur
-      - br_tibia
+      - joint_h_fr
+      - joint_hip_femur_fr
+      - joint_femur_tibia_fr
