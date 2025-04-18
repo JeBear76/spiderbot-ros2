@@ -16,7 +16,6 @@
                 <mesh filename="package://spiderbot_description/meshes/m_coxa_flbr.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="blue" />
         </collision>
     </link>
 
@@ -36,7 +35,7 @@
                 <mesh filename="package://spiderbot_description/meshes/m_femur_flbr.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="green" />
+            <material name="yellow" />
         </visual>
         <collision>
             <origin rpy="0 0 ${PI}" xyz="-0.08 0.23 0.0" />
@@ -44,7 +43,6 @@
                 <mesh filename="package://spiderbot_description/meshes/m_femur_flbr.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="green" />
         </collision>
     </link>
 
@@ -65,7 +63,7 @@
                 <mesh filename="package://spiderbot_description/meshes/m_tibia_flbr.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="pink" />
+            <material name="green" />
         </visual>
         <collision>
             <origin rpy="${PI} ${PI} ${PI}" xyz="0.01 0.26 0.0" />
@@ -73,7 +71,6 @@
                 <mesh filename="package://spiderbot_description/meshes/m_tibia_flbr.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="pink" />
         </collision>
     </link>
 

@@ -32,7 +32,7 @@
                 <mesh filename="package://spiderbot_description/meshes/m_body.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="red" />
+            <material name="purple" />
         </visual>
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0.0" />
@@ -40,7 +40,6 @@
                 <mesh filename="package://spiderbot_description/meshes/m_body.stl"
                     scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="red" />
         </collision>
     </link>
 
