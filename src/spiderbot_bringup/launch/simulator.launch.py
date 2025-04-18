@@ -15,9 +15,9 @@ def generate_launch_description():
     
     controller = IncludeLaunchDescription(
             os.path.join(
-                get_package_share_directory("spiderbot_controller"),
+                get_package_share_directory("spiderbot_controllers"),
                 "launch",
-                "controller.launch.py"
+                "controllers.launch.py"
             ),
             launch_arguments={"is_sim": "True"}.items()
         )
